@@ -1,16 +1,19 @@
 import React, { useState } from 'react'
 import './index.css';
 import logo from './logo.svg'
+import Bill from "./components/Bill"
 
 function App() {
-  const [bill, setBill] = useState(0)
+  const [bill, setBill] = useState("")
+  const [billErrorMessage, setBillErrorMessage] = useState("")
 
-  const handleChangeBill = (e) => {
-    const value = e.target.value.replace(/\D/g, "");
-    if (value === '')
-      return;
+  const handleChangeBill = (value) => {
+    if (value !== "0") {
+      setBillErrorMessage("")
+    } else {
+      setBillErrorMessage("Can't be zero.")
+    }
 
-    console.log("bill:" + bill)
     setBill(value);
   };
 
@@ -24,7 +27,7 @@ function App() {
 
         <div className="m-8">
           {/*form wrapper*/}
-
+          <Bill bill={bill} handleChange={handleChangeBill} errorMessage={billErrorMessage} />
         </div>
      </section>
    </div>
