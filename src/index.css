@@ -1,3 +1,24 @@
+@layer base {
+    :root {
+        /* Primary */
+        --color-cyan-100: hsl(173, 61%, 77%);
+        --color-cyan-200: hsl(172, 67%, 45%);
+
+        /* Neutral */
+        --color-granny-smith-200: hsl(183, 15%, 56%);
+        --color-granny-smith-300: hsl(183, 79%, 24%);
+        --color-granny-smith-400: hsl(183, 85%, 21%);
+        --color-alto-200: hsl(183, 100%, 15%);
+        --color-jelly-bean-200: hsl(186, 14%, 56%);
+        --color-jelly-bean-300: hsl(186, 14%, 43%);
+        --color-emperor-200: hsl(189, 41%, 97%);
+        --color-emperor-300: hsl(185, 41%, 84%);
+
+        /* other */
+        --color-error-200: hsl(13, 70%, 60%);
+    }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

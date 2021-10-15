@@ -27,6 +27,29 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      cyan: {
+        '100': 'var(--color-cyan-100)',
+        '200': 'var(--color-cyan-200)',
+      },
+      'granny-smith': {
+        200: 'var(--color-granny-smith-200)',
+        300: 'var(--color-granny-smith-300)',
+        400: 'var(--color-granny-smith-400)',
+      },
+      alto: {
+        '200': 'var(--color-alto-200)',
+      },
+      'jelly-bean': {
+        200: 'var(--color-jelly-bean-200)',
+        300: 'var(--color-jelly-bean-300)'
+      },
+      emperor: {
+        200: 'var(--color-emperor-200)',
+        300: 'var(--color-emperor-300)'
+      },
+      error: {
+        200: 'var(--color-error-200)',
+      }
     },
     spacing: {
       px: '1px',
