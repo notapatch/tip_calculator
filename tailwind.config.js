@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
@@ -257,6 +258,7 @@ module.exports = {
       ],
       serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: [
+        'Space Mono',
         'ui-monospace',
         'SFMono-Regular',
         'Menlo',
@@ -269,14 +271,14 @@ module.exports = {
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
-      sm: ['0.875rem', { lineHeight: '1.25rem' }],
-      base: ['1rem', { lineHeight: '1.5rem' }],
+      sm: ['0.8125rem', { lineHeight: '1.25rem' }], // 13px
+      base: ['1rem', { lineHeight: '1.5rem' }],     // 16px
       lg: ['1.125rem', { lineHeight: '1.75rem' }],
-      xl: ['1.25rem', { lineHeight: '1.75rem' }],
-      '2xl': ['1.5rem', { lineHeight: '2rem' }],
-      '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+      xl: ['1.25rem', { lineHeight: '1.75rem' }],   // 20px
+      '2xl': ['1.5rem', { lineHeight: '2rem' }],    // 24px
+      '3xl': ['2rem', { lineHeight: '2.25rem' }],   // 32px
       '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-      '5xl': ['3rem', { lineHeight: '1' }],
+      '5xl': ['3rem', { lineHeight: '1' }],         // 48px
       '6xl': ['3.75rem', { lineHeight: '1' }],
       '7xl': ['4.5rem', { lineHeight: '1' }],
       '8xl': ['6rem', { lineHeight: '1' }],
