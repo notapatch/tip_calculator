@@ -3,12 +3,15 @@ import './index.css';
 import logo from './logo.svg'
 import Bill from "./components/Bill"
 import Tips from "./components/Tips"
+import NumberOfPeople from "./components/NumberOfPeople"
 
 function App() {
   const [bill, setBill] = useState("")
   const [billErrorMessage, setBillErrorMessage] = useState("")
   const [regularTip, setRegularTip] = useState("")
   const [customTip, setCustomTip] = useState("")
+  const [people, setPeople] = useState("")
+  const [peopleErrorMessage, setPeopleErrorMessage] = useState("")
 
   const handleChangeBill = (value) => {
     if (value !== "0") {
@@ -30,6 +33,16 @@ function App() {
     setCustomTip(parseFloat(value))
   }
 
+  const handlePeopleChange = (value) => {
+    if (value !== "0") {
+      setPeopleErrorMessage("")
+    } else {
+      setPeopleErrorMessage("Can't be zero.")
+    }
+
+    setPeople(value)
+  }
+
   return (
     <div className="App font-mono bg-emperor-300">
       <header className="h-36 flex justify-center items-center">
@@ -48,6 +61,10 @@ function App() {
               regularTip={regularTip}
               handleChange={handleCustomTip}
               customTip={customTip} />
+          </div>
+
+          <div className="mt-8">
+            <NumberOfPeople people={people} handleChange={handlePeopleChange} errorMessage={peopleErrorMessage} />
           </div>
         </div>
      </section>
