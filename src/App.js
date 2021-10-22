@@ -4,6 +4,7 @@ import logo from './logo.svg'
 import Bill from "./components/Bill"
 import Tips from "./components/Tips"
 import NumberOfPeople from "./components/NumberOfPeople"
+import CalculationCard from "./components/CalculationCard"
 
 function App() {
   const [bill, setBill] = useState("")
@@ -65,6 +66,10 @@ function App() {
 
           <div className="mt-8">
             <NumberOfPeople people={people} handleChange={handlePeopleChange} errorMessage={peopleErrorMessage} />
+          </div>
+
+          <div className="mt-8">
+            <CalculationCard />
           </div>
         </div>
      </section>
