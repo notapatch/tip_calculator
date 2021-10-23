@@ -22,3 +22,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+   .input {
+       @apply h-12 pr-4 w-full text-2xl font-bold text-alto-200 bg-emperor-200 rounded outline-none focus:placeholder-transparent;
+   }
+}
