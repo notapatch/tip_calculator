@@ -560,6 +560,7 @@ module.exports = {
       max: 'max-content',
       prose: '65ch',
       ...breakpoints(theme('screens')),
+      'lg-app': '57.5rem'
     }),
     minHeight: {
       0: '0px',

@@ -7,7 +7,7 @@ function Tips(props) {
   return (
      <div>
        <label className="text-base text-jelly-bean-300 font-bold">Select Tip %</label>
-       <div className="mt-4 grid grid-cols-2 gap-4">
+       <div className="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-4">
          { tip_percents.map((tip_percent) => {
            return (
              <button

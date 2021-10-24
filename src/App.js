@@ -59,30 +59,32 @@ function App() {
   const output = calculateAmounts(bill, regularTip, customTip, people)
 
   return (
-    <div className="App font-mono bg-emperor-300">
+    <div className="App font-mono bg-emperor-300 my-auto">
       <header className="h-36 flex justify-center items-center">
         <img src={logo} className="h-12" alt="logo" />
       </header>
-      <section className="bg-white rounded-t-3xl border">
+      <section className="bg-white rounded-t-3xl lg:rounded-b-3xl border max-w-lg-app mx-auto">
         {/*border added to section to stop margin collapse with inner div*/}
 
-        <div className="m-8">
-          {/*form wrapper*/}
-          <Bill bill={bill} handleChange={handleChangeBill} errorMessage={billErrorMessage} />
+        <div className="m-8 lg:m-0 grid lg:grid-cols-2">
+          <div className="lg:m-12">
+            {/*form wrapper*/}
+            <Bill bill={bill} handleChange={handleChangeBill} errorMessage={billErrorMessage} />
 
-          <div className="mt-10">
-            <Tips
-              handleClick={handleRegularTips}
-              regularTip={regularTip}
-              handleChange={handleCustomTip}
-              customTip={customTip} />
+            <div className="mt-10">
+              <Tips
+                handleClick={handleRegularTips}
+                regularTip={regularTip}
+                handleChange={handleCustomTip}
+                customTip={customTip} />
+            </div>
+
+            <div className="mt-8 ">
+              <NumberOfPeople people={people} handleChange={handlePeopleChange} errorMessage={peopleErrorMessage} />
+            </div>
           </div>
 
-          <div className="mt-8">
-            <NumberOfPeople people={people} handleChange={handlePeopleChange} errorMessage={peopleErrorMessage} />
-          </div>
-
-          <div className="mt-8">
+          <div className="mt-8 lg:my-8 lg:mr-8">
             <CalculationCard output={output} handleClick={handleReset} checkResetDisabled={checkResetDisabled} />
           </div>
         </div>
