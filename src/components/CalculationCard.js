@@ -34,8 +34,9 @@ function calculationCard(props) {
       </div>
       <div className="col-span-2 mt-8 mb-6">
         <button
-          className="h-12 w-full flex items-center justify-center text-alto-200 bg-cyan-200 hover:bg-cyan-100 text-xl font-bold rounded"
+          className="h-12 w-full flex items-center justify-center text-alto-200 bg-cyan-200 hover:bg-cyan-100 text-xl font-bold rounded disabled:bg-granny-smith-300 disabled:text-granny-smith-400"
           onClick={props.handleClick}
+          disabled={props.checkResetDisabled()}
         >
           RESET
         </button>

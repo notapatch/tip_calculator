@@ -52,6 +52,10 @@ function App() {
     setPeople("")
   }
 
+  const checkResetDisabled = () => {
+    return bill + regularTip + customTip + people === ""
+  }
+
   const output = calculateAmounts(bill, regularTip, customTip, people)
 
   return (
@@ -79,7 +83,7 @@ function App() {
           </div>
 
           <div className="mt-8">
-            <CalculationCard output={output} handleClick={handleReset} />
+            <CalculationCard output={output} handleClick={handleReset} checkResetDisabled={checkResetDisabled} />
           </div>
         </div>
      </section>
