@@ -45,6 +45,13 @@ function App() {
     setPeople(value)
   }
 
+  const handleReset = () => {
+    setBill("")
+    setRegularTip("")
+    setCustomTip("")
+    setPeople("")
+  }
+
   const output = calculateAmounts(bill, regularTip, customTip, people)
 
   return (
@@ -72,7 +79,7 @@ function App() {
           </div>
 
           <div className="mt-8">
-            <CalculationCard output={output} />
+            <CalculationCard output={output} handleClick={handleReset} />
           </div>
         </div>
      </section>

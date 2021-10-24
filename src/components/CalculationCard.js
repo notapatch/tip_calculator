@@ -35,6 +35,7 @@ function calculationCard(props) {
       <div className="col-span-2 mt-8 mb-6">
         <button
           className="h-12 w-full flex items-center justify-center text-alto-200 bg-cyan-200 hover:bg-cyan-100 text-xl font-bold rounded"
+          onClick={props.handleClick}
         >
           RESET
         </button>
