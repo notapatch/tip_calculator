@@ -5,6 +5,7 @@ import Bill from "./components/Bill"
 import Tips from "./components/Tips"
 import NumberOfPeople from "./components/NumberOfPeople"
 import CalculationCard from "./components/CalculationCard"
+import calculateAmounts from "./utils/CalculateAmounts"
 
 function App() {
   const [bill, setBill] = useState("")
@@ -44,6 +45,8 @@ function App() {
     setPeople(value)
   }
 
+  const output = calculateAmounts(bill, regularTip, customTip, people)
+
   return (
     <div className="App font-mono bg-emperor-300">
       <header className="h-36 flex justify-center items-center">
@@ -69,7 +72,7 @@ function App() {
           </div>
 
           <div className="mt-8">
-            <CalculationCard />
+            <CalculationCard output={output} />
           </div>
         </div>
      </section>
