@@ -818,6 +818,7 @@ module.exports = {
       screen: '100vw',
       min: 'min-content',
       max: 'max-content',
+      "percent-button": '7.3125rem'
     }),
     zIndex: {
       auto: 'auto',
